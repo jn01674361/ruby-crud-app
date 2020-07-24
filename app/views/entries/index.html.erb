@@ -1,0 +1,9 @@
+<table>
+  <% @entries.each do |entry| %>
+    <tr>
+      <td><%= link_to entry.name, entry_path(entry) %></td>
+      <td><%= button_to 'Edit', edit_entry_path(entry), method: 'get'%></td>
+      <td><%= button_to 'Remove', entry_path(entry), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</table>
+<%= link_to "Add a New Entry", new_entry_path %>

@@ -1,0 +1,15 @@
+<h3>Create an Entry</h3>
+<%= form_with model: @entry do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :score, placeholder: "score" %>
+  <%= form.text_field :date, placeholder: "date" %>
+
+  <%= form.submit %>
+<% end %>
+
+<!-- <%= form_for @entry do |form| %>
+  <%= form.text_field :name, placeholder: 'name' %>
+  <%= form.text_field :score, placeholder: 'score' %>
+  <%= form.text_field :date, placeholder: 'date' %>
+  <%= form.submit %>
+<% end %> -->
